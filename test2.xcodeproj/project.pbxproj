@@ -16,6 +16,8 @@
 		E152722E21D04D7000EC9FB4 /* test2UITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E152722D21D04D7000EC9FB4 /* test2UITests.swift */; };
 		E152723D21D055AB00EC9FB4 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E152723C21D055AB00EC9FB4 /* MapKit.framework */; };
 		E165C95E21E1AD7300B40E23 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E165C95D21E1AD7300B40E23 /* AVFoundation.framework */; };
+		E165C96421E1BABB00B40E23 /* bob.wav in Resources */ = {isa = PBXBuildFile; fileRef = E165C96321E1BABB00B40E23 /* bob.wav */; };
+		E165C96621E1C00E00B40E23 /* E2.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = E165C96521E1C00E00B40E23 /* E2.mp3 */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,7 +53,9 @@
 		E152722F21D04D7000EC9FB4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E152723C21D055AB00EC9FB4 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 		E165C95D21E1AD7300B40E23 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
-		E165C96221E1AF8900B40E23 /* urspyAudio1.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = urspyAudio1.wav; sourceTree = "<group>"; };
+		E165C96321E1BABB00B40E23 /* bob.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = bob.wav; sourceTree = "<group>"; };
+		E165C96521E1C00E00B40E23 /* E2.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = E2.mp3; path = ../../../Downloads/E2.mp3; sourceTree = "<group>"; };
+		E165C96721E1C01000B40E23 /* E2.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = E2.mp3; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -108,8 +112,8 @@
 				E152720D21D04D6F00EC9FB4 /* AppDelegate.swift */,
 				E152720F21D04D6F00EC9FB4 /* ViewController.swift */,
 				E152721121D04D6F00EC9FB4 /* Main.storyboard */,
+				E165C96521E1C00E00B40E23 /* E2.mp3 */,
 				E152721421D04D7000EC9FB4 /* Assets.xcassets */,
-				E165C96221E1AF8900B40E23 /* urspyAudio1.wav */,
 				E165C96121E1AF7E00B40E23 /* Sounds */,
 				E152721621D04D7000EC9FB4 /* LaunchScreen.storyboard */,
 				E152721921D04D7000EC9FB4 /* Info.plist */,
@@ -147,6 +151,8 @@
 		E165C96121E1AF7E00B40E23 /* Sounds */ = {
 			isa = PBXGroup;
 			children = (
+				E165C96721E1C01000B40E23 /* E2.mp3 */,
+				E165C96321E1BABB00B40E23 /* bob.wav */,
 			);
 			path = Sounds;
 			sourceTree = "<group>";
@@ -260,8 +266,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E165C96621E1C00E00B40E23 /* E2.mp3 in Resources */,
 				E152721821D04D7000EC9FB4 /* LaunchScreen.storyboard in Resources */,
 				E152721521D04D7000EC9FB4 /* Assets.xcassets in Resources */,
+				E165C96421E1BABB00B40E23 /* bob.wav in Resources */,
 				E152721321D04D6F00EC9FB4 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -20,19 +20,23 @@ class ViewController: UIViewController , CLLocationManagerDelegate{
     var lat=0.0
     var lon=0.0
     var audioPlayer = AVAudioPlayer()
+    var E2Player = AVAudioPlayer()
+    
+    var e2Played = false;
     
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
         print("console log successful")
         
-         let sound = Bundle.main.path(forResource: "urspyAudio1", ofType: "wav")
+         let sound = Bundle.main.path(forResource: "bob", ofType: "wav")
+        let e2Sound = Bundle.main.path(forResource:"E2", ofType:"mp3")
         
         do{
-            audioPlayer = try AVAudioPlayer(contentsOf: URL(fileURLWithPath:sound!))
-        }
-        catch{
-            print(error)
+            audioPlayer = try AVAudioPlayer(contentsOf: URL(fileURLWithPath:sound!)as URL)
+            E2Player = try AVAudioPlayer(contentsOf: URL(fileURLWithPath:e2Sound!)as URL)
+        }catch{
+        print(error)
         }
         
         locationManager.delegate = self
@@ -55,12 +59,28 @@ class ViewController: UIViewController , CLLocationManagerDelegate{
             let stringLon=lon.description
             
             locationLabel.text="Lat= "+stringLat+" Lon = "+stringLon
+            
+            
+             if(53.94589<lat && lat<53.94624 && -1.05246<lon && lon < -1.05188){
+                //play e2 audio - Health Centre
+                if(!e2Played){
+                    E2Player.play()
+                    e2Played=true;
+                }else{
+                    if(!E2Player.isPlaying){
+                    locationLabel.text="audio finished"
+                }
+                
+                }
+            }
         }
     }
     
     @IBAction func StartButtonPress(_ sender: Any) {
       //  NSLog("start button pressed")
-        audioPlayer.play()
+       print (audioPlayer.isPlaying)
+      // audioPlayer.play()
+       // E2Player.play()
         if (a==false){
             locationLabel.text="Location: Chemistry"
             a=true

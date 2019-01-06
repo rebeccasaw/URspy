@@ -14,6 +14,8 @@
 		E152721821D04D7000EC9FB4 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E152721621D04D7000EC9FB4 /* LaunchScreen.storyboard */; };
 		E152722321D04D7000EC9FB4 /* test2Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E152722221D04D7000EC9FB4 /* test2Tests.swift */; };
 		E152722E21D04D7000EC9FB4 /* test2UITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E152722D21D04D7000EC9FB4 /* test2UITests.swift */; };
+		E152723D21D055AB00EC9FB4 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E152723C21D055AB00EC9FB4 /* MapKit.framework */; };
+		E165C95E21E1AD7300B40E23 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E165C95D21E1AD7300B40E23 /* AVFoundation.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,6 +49,9 @@
 		E152722921D04D7000EC9FB4 /* test2UITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = test2UITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		E152722D21D04D7000EC9FB4 /* test2UITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = test2UITests.swift; sourceTree = "<group>"; };
 		E152722F21D04D7000EC9FB4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E152723C21D055AB00EC9FB4 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
+		E165C95D21E1AD7300B40E23 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
+		E165C96221E1AF8900B40E23 /* urspyAudio1.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = urspyAudio1.wav; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,6 +59,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E165C95E21E1AD7300B40E23 /* AVFoundation.framework in Frameworks */,
+				E152723D21D055AB00EC9FB4 /* MapKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -81,6 +88,7 @@
 				E152722121D04D7000EC9FB4 /* test2Tests */,
 				E152722C21D04D7000EC9FB4 /* test2UITests */,
 				E152720B21D04D6E00EC9FB4 /* Products */,
+				E152723B21D055AB00EC9FB4 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -101,6 +109,8 @@
 				E152720F21D04D6F00EC9FB4 /* ViewController.swift */,
 				E152721121D04D6F00EC9FB4 /* Main.storyboard */,
 				E152721421D04D7000EC9FB4 /* Assets.xcassets */,
+				E165C96221E1AF8900B40E23 /* urspyAudio1.wav */,
+				E165C96121E1AF7E00B40E23 /* Sounds */,
 				E152721621D04D7000EC9FB4 /* LaunchScreen.storyboard */,
 				E152721921D04D7000EC9FB4 /* Info.plist */,
 			);
@@ -123,6 +133,22 @@
 				E152722F21D04D7000EC9FB4 /* Info.plist */,
 			);
 			path = test2UITests;
+			sourceTree = "<group>";
+		};
+		E152723B21D055AB00EC9FB4 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				E165C95D21E1AD7300B40E23 /* AVFoundation.framework */,
+				E152723C21D055AB00EC9FB4 /* MapKit.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		E165C96121E1AF7E00B40E23 /* Sounds */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Sounds;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -193,6 +219,11 @@
 				TargetAttributes = {
 					E152720921D04D6E00EC9FB4 = {
 						CreatedOnToolsVersion = 10.1;
+						SystemCapabilities = {
+							com.apple.Maps.iOS = {
+								enabled = 1;
+							};
+						};
 					};
 					E152721D21D04D7000EC9FB4 = {
 						CreatedOnToolsVersion = 10.1;
@@ -435,6 +466,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = CH229FMVFV;
 				INFOPLIST_FILE = test2/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -453,6 +485,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = CH229FMVFV;
 				INFOPLIST_FILE = test2/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

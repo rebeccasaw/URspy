@@ -7,23 +7,72 @@
 //
 
 import UIKit
+import CoreLocation
+import AVFoundation
 
-class ViewController: UIViewController {
+class ViewController: UIViewController , CLLocationManagerDelegate{
 
+    let locationManager:CLLocationManager=CLLocationManager()
+    
     @IBOutlet weak var locationLabel: UILabel!
-    
-    
-    @IBAction func StartButtonPress(_ sender: Any) {
-        locationLabel.text="Location: Chemistry"
-    }
-    
-    
+    var a = false
+  
+    var lat=0.0
+    var lon=0.0
+    var audioPlayer = AVAudioPlayer()
     
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
-        NSLog("console log successful")
+        print("console log successful")
+        
+         let sound = Bundle.main.path(forResource: "urspyAudio1", ofType: "wav")
+        
+        do{
+            audioPlayer = try AVAudioPlayer(contentsOf: URL(fileURLWithPath:sound!))
+        }
+        catch{
+            print(error)
+        }
+        
+        locationManager.delegate = self
+        locationManager.requestWhenInUseAuthorization()
+        locationManager.startUpdatingLocation()
     }
+    
+    
+    func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
+        for currentLocation in locations {
+           // print("\(index):\(currentLocation)")
+            
+//            print (currentLocation.coordinate.longitude)
+//             print (currentLocation.coordinate.latitude)
+         
+            lon=currentLocation.coordinate.longitude
+            lat=currentLocation.coordinate.latitude
+            
+            let stringLat=lat.description
+            let stringLon=lon.description
+            
+            locationLabel.text="Lat= "+stringLat+" Lon = "+stringLon
+        }
+    }
+    
+    @IBAction func StartButtonPress(_ sender: Any) {
+      //  NSLog("start button pressed")
+        audioPlayer.play()
+        if (a==false){
+            locationLabel.text="Location: Chemistry"
+            a=true
+        } else{
+            locationLabel.text="Location: James"
+            a=false
+        }
+    }
+    
+    
+    
+   
 
 
 }

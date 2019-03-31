@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
-    <device id="retina3_5" orientation="portrait">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_0" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -15,40 +15,78 @@
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="test2" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zHm-uZ-S1p">
-                                <rect key="frame" x="34" y="-22" width="252" height="108"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Location: Home" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="9" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jdy-Pe-E0C">
+                                <rect key="frame" x="0.0" y="111" width="320" height="20"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="20" id="9Wq-8R-beo"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Go to the URY Station and press Start" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="9" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qNI-2y-pbe">
+                                <rect key="frame" x="0.0" y="446" width="320" height="41"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="41" id="032-4n-BgP"/>
+                                    <constraint firstAttribute="height" constant="41" id="2sa-un-5gX"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="URspyLogo" translatesAutoresizingMaskIntoConstraints="NO" id="64R-Yt-2vs">
+                                <rect key="frame" x="0.0" y="169" width="320" height="230"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="64R-Yt-2vs" secondAttribute="height" multiplier="319:229" id="AXl-ox-Iba"/>
+                                </constraints>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zHm-uZ-S1p">
+                                <rect key="frame" x="16" y="44" width="96" height="48"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="48" id="8Bk-vQ-QYx"/>
+                                    <constraint firstAttribute="width" constant="96" id="y3w-oI-p8X"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="35"/>
                                 <state key="normal" title="Start"/>
                                 <connections>
                                     <action selector="StartButtonPress:" destination="BYZ-38-t0r" eventType="touchUpInside" id="ki1-LC-mD9"/>
                                 </connections>
                             </button>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="URspyLogo" translatesAutoresizingMaskIntoConstraints="NO" id="64R-Yt-2vs">
-                                <rect key="frame" x="-5" y="75" width="326" height="222"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Location: Home" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="9" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jdy-Pe-E0C">
-                                <rect key="frame" x="5" y="305" width="310" height="130"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                         </subviews>
                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="jdy-Pe-E0C" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="1we-M7-jdH"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="jdy-Pe-E0C" secondAttribute="trailing" id="4ZR-ae-LjE"/>
+                            <constraint firstItem="64R-Yt-2vs" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Cuh-ly-gMA"/>
+                            <constraint firstItem="qNI-2y-pbe" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Gl9-7Z-WfP"/>
+                            <constraint firstItem="jdy-Pe-E0C" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Hc3-1t-gdP"/>
+                            <constraint firstItem="qNI-2y-pbe" firstAttribute="top" secondItem="64R-Yt-2vs" secondAttribute="bottom" constant="47" id="JcJ-bJ-UkD"/>
+                            <constraint firstItem="64R-Yt-2vs" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="L0Q-ws-YrB"/>
+                            <constraint firstItem="qNI-2y-pbe" firstAttribute="top" secondItem="64R-Yt-2vs" secondAttribute="bottom" constant="47" id="PXR-G4-eZK"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="qNI-2y-pbe" secondAttribute="trailing" id="QmF-lp-XTh"/>
+                            <constraint firstItem="qNI-2y-pbe" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="cAT-iu-zVr"/>
+                            <constraint firstItem="qNI-2y-pbe" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="cEa-s9-NuP"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="64R-Yt-2vs" secondAttribute="trailing" id="eqx-RN-929"/>
+                            <constraint firstItem="qNI-2y-pbe" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="fKg-RF-GfE"/>
+                            <constraint firstItem="jdy-Pe-E0C" firstAttribute="top" secondItem="zHm-uZ-S1p" secondAttribute="bottom" constant="19" id="gd5-Xa-iC8"/>
+                            <constraint firstItem="64R-Yt-2vs" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="oeH-36-Odr"/>
+                            <constraint firstItem="64R-Yt-2vs" firstAttribute="top" secondItem="jdy-Pe-E0C" secondAttribute="bottom" constant="38" id="r7p-TR-YVp"/>
+                            <constraint firstItem="zHm-uZ-S1p" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="w5i-0g-Bg8"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <connections>
+                        <outlet property="goToLabel" destination="qNI-2y-pbe" id="WMv-Xw-F0C"/>
                         <outlet property="locationLabel" destination="jdy-Pe-E0C" id="Yoo-wz-s7k"/>
+                        <outlet property="startButton" destination="zHm-uZ-S1p" id="P2O-xa-TEa"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="133.125" y="131.25"/>
+            <point key="canvasLocation" x="121.875" y="125"/>
         </scene>
     </scenes>
     <resources>
